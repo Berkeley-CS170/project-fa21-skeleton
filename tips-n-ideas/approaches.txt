@@ -1,2 +1,3 @@
 * Integer linear programming does well most years
 * Simulated annealing: Make local adjustments that increase cost with some nonzero probability
+	* Very loose idea to apply it here: generate an ordering, switch to make things better until no switch improves things
