@@ -1,2 +1,22 @@
 * Integer linear programming does well most years
 * Simulated annealing: Make local adjustments that increase cost with some nonzero probability
+
+** POTENTIAL APPROACHES **
+- Greedy profit
+    - Greedy sort by profit and take until no more valid
+- Greedy profit/duration ratio
+    - Sort by profit/duration and take in descending order every value you can
+- Greedy minimize penalties
+    - Sort by end time and meet as many deadlines as possible
+- Greedy minimize loss incurred
+    - Sort at each step by for each task T: num_tasks * profit_T - SUM(for each task O not equal T (profit O - profit O at time now + duration T))
+
+
+** POTENTIAL HEURISTICS / ADDITIONAL HELP **
+- Chunk the problem - i.e. separate into hours or some such breakdown
+- Use simulated annealing or some similar tool to disrupt an input
+
+** INVARIANTS **
+- If a task can be moved down in our ordering without incurring a penalty, it is ALWAYS at least as good if not better to do so
+- Tasks have a half life of ~40 minutes
+- Choosing task i incurs a penalty = sum(loss of all pending tasks incurred over duration i)
