@@ -1,6 +1,5 @@
 * Integer linear programming does well most years
 * Simulated annealing: Make local adjustments that increase cost with some nonzero probability
-<<<<<<< HEAD
 
 ** POTENTIAL APPROACHES **
 - Greedy profit
@@ -21,6 +20,4 @@
 - If a task can be moved down in our ordering without incurring a penalty, it is ALWAYS at least as good if not better to do so
 - Tasks have a half life of ~40 minutes
 - Choosing task i incurs a penalty = sum(loss of all pending tasks incurred over duration i)
-=======
 	* Very loose idea to apply it here: generate an ordering, switch to make things better until no switch improves things
->>>>>>> 91983db93e85a5141ac01444376dc770b2b5fe83
